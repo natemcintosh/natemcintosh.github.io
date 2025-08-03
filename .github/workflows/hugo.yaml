@@ -29,9 +29,14 @@ defaults:
     shell: bash
 
 jobs:
-  # Build job
+  # Spell check job - runs first
+  spell-check:
+    uses: ./.github/workflows/spell-check.yaml
+
+  # Build job - depends on spell check passing
   build:
     runs-on: ubuntu-latest
+    needs: spell-check
     env:
       DART_SASS_VERSION: 1.89.2
       HUGO_VERSION: 0.148.2
