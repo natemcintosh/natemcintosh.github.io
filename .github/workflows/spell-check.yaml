@@ -1,0 +1,34 @@
+name: Spell Check
+
+on:
+  # Run on pushes to main branch and pull requests
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  # Allow this workflow to be called by other workflows
+  workflow_call:
+
+jobs:
+  spell-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install hunspell
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y hunspell hunspell-en-us
+
+      - name: Make spell check script executable
+        run: chmod +x scripts/spell-check.sh
+
+      - name: Run spell check on content
+        run: ./scripts/spell-check.sh
+
+      - name: Show personal dictionary contents
+        if: failure()
+        run: |
+          echo "📖 Current personal dictionary contents:"
+          cat .hunspell_personal
