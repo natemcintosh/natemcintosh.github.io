@@ -8,7 +8,7 @@ author = "Nate McIntosh"
 
 Hello World! I'm a data scientist at the CDC's [Center for Forecasting and Outbreak Analytics](https://www.cdc.gov/forecast-outbreak-analytics/index.html) working on modeling and simulation for disease forecasting.
 
-My background is actually in mechanical engineering, but I discovered a passion for writing software to solve real-world problems. I've since earned a Master's in Data Science, and now officially hold the title of "Data Scientist."  Data science feels like a great fit for combining problem-solving with the development of useful tools.
+My background is actually in mechanical engineering, but I discovered a passion for writing software to solve real-world problems. I've since earned a Master's in Data Science, and now officially hold the title of "Data Scientist."  Data science feels like a good fit for combining problem-solving with the development of useful tools.
 
 ## Professionally Related Hobbies
 - **Programming Languages:** I'm always exploring new languages! Currently enjoying:
